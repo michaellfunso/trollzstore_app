@@ -26,9 +26,9 @@ class _WebViewWithNavigationState extends State<WebViewWithNavigation> {
   // URLs for navigation buttons
   final Map<String, String> _urls = {
     'Home': 'https://trollzstore.com.ng/',
-    'Categories': 'https://trollzstore.com.ng/categories',
-    'Cart': 'https://trollzstore.com.ng/cart',
-    'Profile': 'https://trollzstore.com.ng/profile',
+    'Categories': 'https://trollzstore.com.ng/products-grid.php?cat=Causuals',
+    'Contact': 'https://trollzstore.com.ng/contact.php',
+    'Profile': 'https://trollzstore.com.ng/login.php',
   };
 
   // Current selected index in the navigation bar
@@ -66,7 +66,7 @@ class _WebViewWithNavigationState extends State<WebViewWithNavigation> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Trollz Store'),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.deepOrangeAccent,
       ),
       body: WebViewWidget(controller: _webViewController),
       bottomNavigationBar: BottomNavigationBar(
@@ -88,15 +88,15 @@ class _WebViewWithNavigationState extends State<WebViewWithNavigation> {
             label: 'Categories',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Cart',
+            icon: Icon(Icons.contact_mail_rounded),
+            label: 'Contact',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],
-        selectedItemColor: Colors.deepPurple,
+        selectedItemColor: Colors.deepOrange,
         unselectedItemColor: Colors.grey,
       ),
     );
